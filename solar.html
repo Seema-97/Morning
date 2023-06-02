@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar-system</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* overflow: hidden; */
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        /* background: url(pexels-gilmar-ozio-7628254.jpg); */
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .small-container {
+        height: 40rem;
+        width: 40rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      html {
+        font-size: 10px;
+      }
+
+      .Sun {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        box-shadow: 0rem 0rem 4rem 1rem rgb(255, 255, 141);
+        background-color: rgb(239, 176, 60);
+      }
+
+      .Earth,
+      .Moon {
+        position: absolute;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 0.1em 0.1em 0 0;
+        border-radius: 50%;
+      }
+
+      .Earth {
+        top: 5rem;
+        right: 4rem;
+        width: 30em;
+        height: 30em;
+        animation: orbit 20s linear infinite;
+      }
+
+      .Earth::before {
+        content: "";
+        height: 3.2rem;
+        width: 3.2rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 2.8rem;
+        right: 2.8rem;
+        background-color: aqua;
+      }
+
+      .Moon {
+        top: 0;
+        right: 0;
+        width: 8rem;
+        height: 8rem;
+        animation: orbit 2.5s linear infinite;
+      }
+
+      .Moon::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: rgb(187, 187, 187);
+        right: 0.2rem;
+        top: 0.6rem;
+      }
+
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .morning{
+        display:flex;
+        /* border:2px solid red; */
+        padding:20px;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      h1{
+        color:transparent;
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow:0px 0 20px 20px white;
+      }
+
+      img{
+        width:35px;
+        height:35px;
+        margin-left:10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="small-container">
+        <div class="Sun"></div>
+        <div class="Earth">
+          <div class="Moon"></div>
+        </div>
+      </div>
+      <div class="morning">
+        <h1>Good Morning</h1>
+        <img src="pngaaa.com-925255.png" alt="">
+        </div>
+    </div>
+  </body>
+</html>
